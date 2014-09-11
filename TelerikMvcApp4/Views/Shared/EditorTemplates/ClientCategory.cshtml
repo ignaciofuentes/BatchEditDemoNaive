@@ -1,0 +1,8 @@
+﻿@(Html.Kendo().ComboBoxFor(m => m)
+        .Placeholder("Select a Category")
+        .HighlightFirst(false)
+            .DataSource(ds =>
+            {
+                ds.Read(r => r.Action("Categories", "Home"));
+            })
+)
